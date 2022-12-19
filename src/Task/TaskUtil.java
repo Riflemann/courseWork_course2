@@ -28,7 +28,7 @@ public class TaskUtil {
                 inputDescription(scanner),
                 inputPeriodicity(scanner),
                 inputTypeTask(scanner));
-        taskCollection.put(task.getID(), task);
+        taskCollection.put(task.getiD(), task);
     }
 
     public static void deleteTask(Scanner scanner) {
@@ -37,7 +37,7 @@ public class TaskUtil {
         System.out.println("Введите ID задачи: ");
         int idForDelete = scanner.nextInt();
 
-        archive.put(taskCollection.get(idForDelete).getID(), taskCollection.get(idForDelete));
+        archive.put(taskCollection.get(idForDelete).getiD(), taskCollection.get(idForDelete));
 
         archive.get(idForDelete).setDeleted(true);
         taskCollection.remove(idForDelete);
